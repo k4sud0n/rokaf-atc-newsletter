@@ -1,0 +1,23 @@
+{
+    "name": "rokaf_atc_newsletter",
+    "version": "1.0.0",
+    "description": "공군훈련소 인편 뉴스레터",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/k4sud0n/rokaf_atc_newsletter.git"
+    },
+    "author": "k4sud0n",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/k4sud0n/rokaf_atc_newsletter/issues"
+    },
+    "homepage": "https://github.com/k4sud0n/rokaf_atc_newsletter#readme",
+    "dependencies": {
+        "axios": "^0.21.4",
+        "cheerio": "^1.0.0-rc.10"
+    }
+}
