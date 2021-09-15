@@ -25,14 +25,15 @@ const getWorldSoccerNews = () => {
                 return this.nodeType === 3;
             });
 
+        const worldSoccerNewsContentEach = worldSoccerNewsContentSelector.each((i, element) => {
+            $(element).text();
+        });
+
         worldSoccerNewsListTitleSelector.each((i, element) => {
             worldSoccerNewsList[i] = {
                 title: $(element).text(),
+                content: worldSoccerNewsContentEach[i].data,
             };
-        });
-
-        worldSoccerNewsContentSelector.each((i, element) => {
-            worldSoccerNewsList[i].content = $(element).text();
         });
 
         console.log(worldSoccerNewsList);
