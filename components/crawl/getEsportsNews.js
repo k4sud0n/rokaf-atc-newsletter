@@ -1,25 +1,18 @@
-const axios = require('axios');
 const cheerio = require('cheerio');
 
-const getHTML = async () => {
-    try {
-        return await axios.get('https://campnews21.com/');
-    } catch (errror) {
-        console.error(error);
-    }
-};
+const getHTML = require('./getHTML');
 
-const getWorldSoccerNews = async () => {
+const getEsportsNews = async () => {
     const list = [];
 
     const result = await getHTML().then((html) => {
         const $ = cheerio.load(html.data);
 
         const titleSelector = $(
-            '#modal-worldsoccer > div > div > div.modal-body.text-center > strong'
+            '#modal-esports > div > div > div.modal-body.text-center > strong'
         );
         const contentSelector = $(
-            '#modal-worldsoccer > div > div > div.modal-body.text-center'
+            '#modal-esports > div > div > div.modal-body.text-center'
         )
             .contents()
             .filter(function () {
@@ -41,4 +34,4 @@ const getWorldSoccerNews = async () => {
     return list;
 };
 
-module.exports = getWorldSoccerNews;
+module.exports = getEsportsNews;
