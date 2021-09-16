@@ -1,8 +1,6 @@
-require('dotenv').config({ path: '../../.env' });
-
 const puppeteer = require('puppeteer');
 
-const sendNews = async () => {
+const openWebsite = async () => {
     const browser = await puppeteer.launch({
         headless: false,
     });
@@ -44,4 +42,4 @@ const sendNews = async () => {
     await page.click('#btnNext');
 };
 
-sendNews();
+module.exports = openWebsite;
