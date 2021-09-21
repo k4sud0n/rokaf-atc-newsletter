@@ -52,6 +52,6 @@ SENDER_PASSWORD=QWER1234
 npm start ## or yarn start
 ```
 
-## License
+## 라이센스
 
 [MIT](https://choosealicense.com/licenses/mit/)
