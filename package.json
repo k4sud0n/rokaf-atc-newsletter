@@ -20,6 +20,7 @@
         "axios": "^0.21.4",
         "cheerio": "^1.0.0-rc.10",
         "dotenv": "^10.0.0",
+        "firstline": "^2.0.2",
         "puppeteer": "^10.2.0"
     }
 }

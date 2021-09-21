@@ -6,10 +6,10 @@ const sendMessage = async (letterTitle, list) => {
     });
 
     const page = await browser.newPage();
-    const name = process.env.NAME;
-    const birthYear = process.env.BIRTH_YEAR;
-    const birthMonth = process.env.BIRTH_MONTH;
-    const birthDay = process.env.BIRTH_DAY;
+    const name = process.env.TRAINEE_NAME;
+    const birthYear = process.env.TRAINEE_BIRTH_YEAR;
+    const birthMonth = process.env.TRAINEE_BIRTH_MONTH;
+    const birthDay = process.env.TRAINEE_BIRTH_DAY;
 
     await page.goto(
         'https://atc.airforce.mil.kr:444/user/indexSub.action?codyMenuSeq=156893223&siteId=last2'
@@ -63,28 +63,35 @@ const sendMessage = async (letterTitle, list) => {
     // await newPopup.click('#proceed-button');
 
     await newPopup.waitForSelector('#keyword');
-    const address = '도약로 206';
+
+    const address = process.env.SENDER_ADDRESS;
+
     await newPopup.evaluate((address) => {
         document.querySelector('#keyword').value = address;
     }, address);
+
     await newPopup.click(
         '#searchContentBox > div.search-wrap > fieldset > span > input[type=button]:nth-child(2)'
     );
+
     await newPopup.waitForSelector('#roadAddrTd1 > a');
     await newPopup.click('#roadAddrTd1 > a');
-    const detailedAddress = '211동 1802호';
+
+    const detailedAddress = process.env.SENDER_DETAILED_ADDRESS;
+
     await newPopup.evaluate((detailedAddress) => {
         document.querySelector('#rtAddrDetail').value = detailedAddress;
     }, detailedAddress);
+
     await newPopup.waitForSelector('#resultData > div > a');
     await newPopup.click('#resultData > div > a');
     // 도로명주소 팝업 끝
 
-    const senderName = '뉴스레터';
-    const relationship = '친구';
+    const senderName = process.env.SENDER_NAME;
+    const relationship = process.env.SENDER_RELATIONSHIP;
     const title = letterTitle;
     let content = '';
-    const password = process.env.PASSWORD;
+    const password = process.env.SENDER_PASSWORD;
 
     for (let i = 0; i < 10; i++) {
         content += `${list[i].title}-${list[i].content}`;
