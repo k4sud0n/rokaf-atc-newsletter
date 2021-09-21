@@ -23,28 +23,34 @@ npm install
 2) ```.env``` 파일을 생성한뒤, 아래와 같이 작성합니다.
 
 ```
-NAME=이름
-BIRTH_YEAR=생일년도
-BIRTH_MONTH=생일월
-BIRTH_DAY=생일일
-PASSWORD=비밀번호
+TRAINEE_NAME=훈련생 이름
+TRAINEE_BIRTH_YEAR=훈련생 생년
+TRAINEE_BIRTH_MONTH=훈련생 생월
+TRAINEE_BIRTH_DAY=훈련생 생일
+SENDER_NAME=보내는이 이름
+SENDER_RELATIONSHIP=훈련생과의 관계
+SENDER_ADDRESS=보내는이 주소
+SENDER_DETAILED_ADDRESS=보내는이 상세 주소
+SENDER_PASSWORD=보내는이 비밀번호
 ```
 아래는 예시입니다.
 ```
-NAME=홍길동
-BIRTH_YEAR=1999
-BIRTH_MONTH=09
-BIRTH_DAY=19
-PASSWORD=QWER1234
+TRAINEE_NAME=홍길동
+TRAINEE_BIRTH_YEAR=1999
+TRAINEE_BIRTH_MONTH=09
+TRAINEE_BIRTH_DAY=19
+SENDER_NAME=이춘향
+SENDER_RELATIONSHIP=친구
+SENDER_ADDRESS="경기도 용인시 처인구 모현면 외대로 81" ## 큰따옴표 안에 작성
+SENDER_DETAILED_ADDRESS="211동 1802호" ## 큰따옴표 안에 작성
+SENDER_PASSWORD=QWER1234
 ```
 
-3) npm을 사용해 실행합니다.
+3) npm이나 yarn을 사용해 실행합니다.
 
 ```bash
-npm start
+npm start ## or yarn start
 ```
-
-
 
 ## License
 
