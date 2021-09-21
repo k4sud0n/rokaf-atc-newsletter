@@ -14,10 +14,10 @@ git clone https://github.com/k4sud0n/rokaf-atc-newsletter.git
 
 ## 실행
 
-1) npm을 사용해서 필수 모듈들을 설치합니다.
+1) npm이나 yarn을 사용해서 필수 모듈들을 설치합니다.
 
 ```bash
-npm install
+npm install ## or yarn
 ```
 
 2) ```.env``` 파일을 생성한뒤, 아래와 같이 작성합니다.
