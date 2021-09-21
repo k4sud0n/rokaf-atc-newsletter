@@ -52,6 +52,21 @@ SENDER_PASSWORD=QWER1234
 npm start ## or yarn start
 ```
 
+## 번외
+
+실행 작업을 자동화하기 위해 crontab에 등록하실수 있습니다.
+
+1. crontab 실행
+```bash
+crontab -e
+```
+
+2. crontab 등록
+```bash
+0 0 * * * cd ~/rokaf-atc-newsletter && yarn start
+0 13 * * * cd ~/rokaf-atc-newsletter && yarn start
+```
+
 ## 라이센스
 
 [MIT](https://choosealicense.com/licenses/mit/)
