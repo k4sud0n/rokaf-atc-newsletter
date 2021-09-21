@@ -1,5 +1,5 @@
 {
-    "name": "rokaf_atc_newsletter",
+    "name": "rokaf-atc-newsletter",
     "version": "1.0.0",
     "description": "공군훈련소 인편 뉴스레터",
     "main": "index.js",

@@ -9,7 +9,7 @@
 git을 사용해서 설치합니다.
 
 ```bash
-git clone https://github.com/k4sud0n/rokaf_atc_newsletter.git
+git clone https://github.com/k4sud0n/rokaf-atc-newsletter.git
 ```
 
 ## 실행
@@ -27,6 +27,7 @@ NAME=이름
 BIRTH_YEAR=생일년도
 BIRTH_MONTH=생일월
 BIRTH_DAY=생일일
+PASSWORD=비밀번호
 ```
 아래는 예시입니다.
 ```
@@ -34,6 +35,7 @@ NAME=홍길동
 BIRTH_YEAR=1999
 BIRTH_MONTH=09
 BIRTH_DAY=19
+PASSWORD=QWER1234
 ```
 
 3) npm을 사용해 실행합니다.

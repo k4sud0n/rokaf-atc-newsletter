@@ -3,7 +3,7 @@ require('dotenv').config();
 const getWorldSoccerNews = require('./components/crawl/getWorldSoccerNews');
 const getEsportsNews = require('./components/crawl/getEsportsNews');
 
-const openWebsite = require('./components/send/openWebsite');
+const openWebsite = require('./components/open/openWebsite');
 
 const worldSoccerNews = getWorldSoccerNews();
 const esportNews = getEsportsNews();
