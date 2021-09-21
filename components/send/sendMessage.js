@@ -1,8 +1,8 @@
 const puppeteer = require('puppeteer');
 
-const sendMessage = async (list) => {
+const sendMessage = async (letterTitle, list) => {
     const browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
     });
 
     const page = await browser.newPage();
@@ -58,9 +58,10 @@ const sendMessage = async (list) => {
     const [newPopup] = await Promise.all([
         new Promise((resolve) => page.once('popup', resolve)),
     ]);
-    await newPopup.click('#proceed-button');
 
-    // 팝업 에러부분 무시
+    // // 팝업 에러부분 무시 (headless: false일때만)
+    // await newPopup.click('#proceed-button');
+
     await newPopup.waitForSelector('#keyword');
     const address = '도약로 206';
     await newPopup.evaluate((address) => {
@@ -81,12 +82,12 @@ const sendMessage = async (list) => {
 
     const senderName = '뉴스레터';
     const relationship = '친구';
-    const title = '오늘의 해외 축구 뉴스';
+    const title = letterTitle;
     let content = '';
     const password = process.env.PASSWORD;
 
     for (let i = 0; i < 10; i++) {
-        content += `\n${list[i].title}\n${list[i].content}\n`;
+        content += `${list[i].title}-${list[i].content}`;
     }
 
     await page.evaluate(

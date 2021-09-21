@@ -9,9 +9,9 @@ const worldSoccerNews = getWorldSoccerNews();
 const esportNews = getEsportsNews();
 
 worldSoccerNews.then(function (value) {
-    sendMessage(value);
+    sendMessage('오늘의 해외 축구 뉴스', value);
 });
 
 esportNews.then(function (value) {
-    sendMessage(value);
+    sendMessage('오늘의 이스포츠 뉴스', value);
 });
