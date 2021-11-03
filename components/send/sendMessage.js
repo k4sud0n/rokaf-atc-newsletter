@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 const sendMessage = async (letterTitle, list) => {
     const browser = await puppeteer.launch({
-        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
     const page = await browser.newPage();
