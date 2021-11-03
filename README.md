@@ -67,6 +67,10 @@ crontab -e
 0 13 * * * cd ~/rokaf-atc-newsletter && yarn start
 ```
 
+## 참고
+
+리눅스(우분투)에서 puppeteer 오류가 날 경우 [링크](https://curryyou.tistory.com/222)를 참고해주세요.
+
 ## 라이센스
 
 [MIT](https://choosealicense.com/licenses/mit/)
