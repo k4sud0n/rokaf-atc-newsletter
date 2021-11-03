@@ -63,7 +63,7 @@ crontab -e
 
 2. crontab 등록
 ```bash
-0 0 * * * cd ~/rokaf-atc-newsletter && yarn start
+0 10 * * * cd ~/rokaf-atc-newsletter && yarn start
 0 13 * * * cd ~/rokaf-atc-newsletter && yarn start
 ```
 
